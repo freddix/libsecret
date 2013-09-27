@@ -1,7 +1,7 @@
 Summary:	Library for storing and retrieving passwords and other secrets
 Name:		libsecret
 Version:	0.16
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libsecret/0.16/%{name}-%{version}.tar.xz
@@ -25,6 +25,7 @@ Service.
 Summary:	Header files for libsecret library
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
+Requires:	libgcrypt-devel
 
 %description devel
 Header files for libsecret library.
@@ -76,9 +77,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/libsecret-1/
+%{_includedir}/libsecret-1
 %{_libdir}/libsecret-*.so
-%{_libdir}/libsecret-*.la
 %{_pkgconfigdir}/*.pc
 %{_datadir}/gir-1.0/*.gir
 %{_datadir}/vala/vapi/*.deps
