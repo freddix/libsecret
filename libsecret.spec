@@ -1,11 +1,11 @@
 Summary:	Library for storing and retrieving passwords and other secrets
 Name:		libsecret
-Version:	0.16
-Release:	3
+Version:	0.18
+Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/libsecret/0.16/%{name}-%{version}.tar.xz
-# Source0-md5:	321ef07775faed2305da08f989dfa41b
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/libsecret/0.18/%{name}-%{version}.tar.xz
+# Source0-md5:	279d723cd005e80d1d304f74a3488acc
 URL:		https://live.gnome.org/Libsecret
 BuildRequires:	glib-devel
 BuildRequires:	gobject-introspection-devel
@@ -57,6 +57,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
 
 %find_lang libsecret
 
