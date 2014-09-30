@@ -1,7 +1,7 @@
 Summary:	Library for storing and retrieving passwords and other secrets
 Name:		libsecret
 Version:	0.18
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libsecret/0.18/%{name}-%{version}.tar.xz
